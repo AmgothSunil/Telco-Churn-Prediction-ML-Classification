@@ -58,7 +58,7 @@ if submit:
         st.success(f"Churn Prediction: {result['Churn_Prediction']} ")
         st.info(f"Churn Probability: {result['Churn_Probability']:.2f}")
 
-        if result['Churn_Prediction'] >= 0.5:
+        if result['Churn_Prediction'] == 1:
             st.warning("The person will likely churn")
         else:
             st.success("The person will not churn")
