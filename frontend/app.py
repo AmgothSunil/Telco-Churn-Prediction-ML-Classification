@@ -52,7 +52,7 @@ if submit:
         "TotalCharges": TotalCharges
     }
 
-    response = requests.post(" http://127.0.0.1:8000/predict", json=customer_data)
+    response = requests.post("https://telco-churn-prediction-ml-classification.onrender.com/predict", json=customer_data)
     if response.status_code == 200:
         result = response.json()
         st.success(f"Churn Prediction: {result['Churn_Prediction']} ")
